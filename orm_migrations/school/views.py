@@ -1,13 +1,16 @@
 from django.views.generic import ListView
 from django.shortcuts import render
 
-from .models import Student
+from .models import Student, Teacher
 
 
 def students_list(request):
     template = 'school/students_list.html'
-    context = {}
-
+    object_list = Student.objects.all()
+    teachers_list = Teacher.objects.all()
+    context = {'object_list': object_list}
+    # for i in object_list:
+    #     print(i.teachers.get())
     # используйте этот параметр для упорядочивания результатов
     # https://docs.djangoproject.com/en/2.2/ref/models/querysets/#django.db.models.query.QuerySet.order_by
     ordering = 'group'
