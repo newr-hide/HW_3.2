@@ -6,7 +6,13 @@
 <div class="row">
   <ul>
   {% for student in object_list %}
+<<<<<<< HEAD
     <li>{{ student.name }} {{ student.group }} <br> Преподаватель: {{ student.teacher.name }} {{ student.teachers.subject }}</li>
+=======
+    <li>{{ student.name }} {{ student.group }} <br> Преподаватели: {% for teacher in student.teachers.all %}
+            {{ teacher.name }} {{ teacher.subject }} <br> {% if not forloop.last %} {% endif %}
+        {% endfor %} </li>
+>>>>>>> ec3b3c7556d62297291a04404e9dc6951832d0d7
   {% endfor %}
   </ul>
 </div>

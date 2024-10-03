@@ -82,6 +82,8 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'root',
     }
+
+
 }
 
 # Password validation

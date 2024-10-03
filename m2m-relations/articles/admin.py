@@ -36,3 +36,4 @@ class ArticleAdmin(admin.ModelAdmin):
 @admin.register(Badge)
 class BadgeAdmin(admin.ModelAdmin):
     pass
+
